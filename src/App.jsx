@@ -1,7 +1,8 @@
 import { Disc, ExternalLink, Search } from "lucide-react";
-import DiggingLogo from "./DiggingLogo";
+import DigginLogo from "./DigginLogo";
+import demoGif from "./assets/demo.gif";
 
-const DiggingLanding = () => {
+const DigginLanding = () => {
   return (
     // MAIN CONTAINER: Added consistent padding and a nice grid pattern background
     <div className='min-h-screen bg-[#111] text-white font-sans selection:bg-[#F5DF2E] selection:text-black bg-[radial-gradient(#333_1px,transparent_1px)] [background-size:16px_16px]'>
@@ -9,19 +10,19 @@ const DiggingLanding = () => {
       <nav className='border-b-4 border-[#333] px-6 py-5 flex justify-between items-center bg-[#111] sticky top-0 z-50'>
         <div className='flex items-center gap-3'>
           {/* Logo */}
-          <DiggingLogo
+          <DigginLogo
             size={48}
             className='drop-shadow-[4px_4px_0px_rgba(255,255,255,0.2)]'
           />
           <span className='text-3xl font-black tracking-tighter uppercase italic'>
-            Digging.
+            Diggin<span className='text-[#F5DF2E]'>.</span>
           </span>
         </div>
         <a
-          href='#'
+          href='/privacy'
           className='hidden md:block font-bold text-gray-400 hover:text-[#F5DF2E] transition-colors uppercase tracking-widest text-sm'
         >
-          Documentation
+          Privacy Policy
         </a>
       </nav>
 
@@ -37,7 +38,7 @@ const DiggingLanding = () => {
           Stop Searching.
           <br />
           {/* Text Gradient Fix */}
-          <span className='text-[#F5DF2E]'>Start Digging.</span>
+          <span className='text-[#F5DF2E]'>Start Diggin.</span>
         </h1>
 
         {/* Subhead */}
@@ -70,18 +71,17 @@ const DiggingLanding = () => {
               <div className='w-3 h-3 rounded-full bg-[#27c93f]'></div>
             </div>
             <div className='flex-1 bg-[#222] rounded text-xs py-1.5 px-3 text-gray-500 font-mono text-center'>
-              pitchfork.com/reviews/albums/radiohead-in-rainbows
+              Album Reviews Page
             </div>
           </div>
 
-          {/* GIF Placeholder */}
-          <div className='aspect-video bg-[#111] flex flex-col items-center justify-center border-2 border-dashed border-[#333] text-[#444] rounded-lg'>
-            <p className='font-bold text-2xl mb-2 text-gray-600'>
-              Insert Demo GIF Here
-            </p>
-            <p className='text-sm font-mono'>
-              1. Highlight "In Rainbows" → 2. Right Click
-            </p>
+          {/* 2. THE GIF PLAYER */}
+          <div className='aspect-video bg-[#111] overflow-hidden rounded-lg border-2 border-[#333]'>
+            <img
+              src={demoGif}
+              alt='Diggin Extension Demo'
+              className='w-full h-full object-cover'
+            />
           </div>
         </div>
       </section>
@@ -138,7 +138,7 @@ const DiggingLanding = () => {
       <footer className='px-6 py-12 text-center md:text-left flex flex-col md:flex-row justify-between items-center max-w-6xl mx-auto'>
         <div className='mb-8 md:mb-0'>
           <p className='font-black text-2xl uppercase italic tracking-tighter'>
-            Digging.
+            Diggin.
           </p>
           <p className='text-sm text-gray-600 mt-2 font-medium'>
             © 2026 Jonathan Mendoza.
@@ -146,10 +146,10 @@ const DiggingLanding = () => {
         </div>
         <div className='flex gap-8 font-bold text-lg'>
           <a
-            href='#'
+            href='/privacy'
             className='hover:text-[#F5DF2E] transition-colors underline decoration-2 decoration-[#333] underline-offset-4'
           >
-            Twitter
+            Privacy Policy
           </a>
           <a
             href='#'
@@ -169,4 +169,4 @@ const DiggingLanding = () => {
   );
 };
 
-export default DiggingLanding;
+export default DigginLanding;

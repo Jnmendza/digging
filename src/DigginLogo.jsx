@@ -1,6 +1,6 @@
 import React from "react";
 
-const DiggingLogo = ({ size = 40, className = "" }) => {
+const DigginLogo = ({ size = 40, className = "" }) => {
   return (
     <svg
       width={size}
@@ -56,4 +56,4 @@ const DiggingLogo = ({ size = 40, className = "" }) => {
   );
 };
 
-export default DiggingLogo;
+export default DigginLogo;
