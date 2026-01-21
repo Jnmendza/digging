@@ -10,27 +10,48 @@ const DiggingLogo = ({ size = 40, className = "" }) => {
       xmlns='http://www.w3.org/2000/svg'
       className={className}
     >
-      {/* The "Found" Record (Popped Up) - Electric Yellow */}
-      <rect
-        x='13'
-        y='2'
-        width='6'
-        height='10'
+      {/* 1. THE RECORD (Popping out from inside) */}
+      {/* It sits "behind" the front faces of the crate */}
+      <path
+        d='M14 2L14 12L8 15V5L14 2Z'
         className='fill-[#F5DF2E] stroke-black stroke-2'
       />
 
-      {/* The Crate Front - Heavy Black Outline */}
+      {/* 2. THE CRATE LEFT FACE */}
       <path
-        d='M2 10H22V20C22 21.1046 21.1046 22 20 22H4C2.89543 22 2 21.1046 2 20V10Z'
-        className='fill-white stroke-black stroke-[3px]'
+        d='M2 7L12 12V22L2 17V7Z'
+        className='fill-white stroke-black stroke-[2.5px]'
       />
 
-      {/* The "Other" Records (Vertical Lines) */}
-      <line x1='6' y1='13' x2='6' y2='19' className='stroke-black stroke-2' />
-      <line x1='10' y1='13' x2='10' y2='19' className='stroke-black stroke-2' />
+      {/* 3. THE CRATE RIGHT FACE */}
+      <path
+        d='M12 12L22 7V17L12 22V12Z'
+        className='fill-white stroke-black stroke-[2.5px]'
+      />
 
-      {/* Diagonal Texture (Optional Detail for 'Street' Vibe) */}
-      <line x1='18' y1='18' x2='20' y2='16' className='stroke-black stroke-2' />
+      {/* 4. THE CRATE TOP (Rim/Opening) */}
+      <path
+        d='M2 7L12 2L22 7L12 12L2 7Z'
+        className='fill-none stroke-black stroke-[2.5px]'
+      />
+
+      {/* 5. CRATE DETAILS (Vertical Slats) */}
+      {/* Left Face Slat */}
+      <line
+        x1='7'
+        y1='9.5'
+        x2='7'
+        y2='19.5'
+        className='stroke-black stroke-[2px]'
+      />
+      {/* Right Face Slat */}
+      <line
+        x1='17'
+        y1='9.5'
+        x2='17'
+        y2='19.5'
+        className='stroke-black stroke-[2px]'
+      />
     </svg>
   );
 };
