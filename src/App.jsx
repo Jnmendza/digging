@@ -53,7 +53,15 @@ const DigginLanding = () => {
             Add to Chrome — It's Free
           </button>
 
-          <button className='w-full md:w-auto bg-black border-4 border-[#333] text-white text-lg font-bold px-10 py-5 uppercase tracking-wide hover:bg-[#222] hover:border-[#555] transition-colors flex items-center justify-center gap-3'>
+          <button
+            onClick={() => {
+              const element = document.getElementById("demo");
+              element?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+            className='w-full md:w-auto bg-black border-4 border-[#333] text-white text-lg font-bold px-10 py-5 uppercase tracking-wide hover:bg-[#222] hover:border-[#555] transition-colors flex items-center justify-center gap-3'
+          >
             <Disc size={24} />
             Watch the Demo
           </button>
@@ -61,7 +69,7 @@ const DigginLanding = () => {
       </header>
 
       {/* DEMO SECTION */}
-      <section className='px-6 pb-24'>
+      <section className='px-6 pb-24' id='demo'>
         <div className='max-w-5xl mx-auto border-4 border-[#333] bg-[#000] p-2 rounded-xl shadow-[0px_0px_40px_0px_rgba(245,223,46,0.1)]'>
           {/* Browser Header */}
           <div className='flex items-center gap-3 mb-4 border-b border-[#333] pb-3 px-2'>
@@ -138,7 +146,7 @@ const DigginLanding = () => {
       <footer className='px-6 py-12 text-center md:text-left flex flex-col md:flex-row justify-between items-center max-w-6xl mx-auto'>
         <div className='mb-8 md:mb-0'>
           <p className='font-black text-2xl uppercase italic tracking-tighter'>
-            Diggin.
+            Diggin<span className='text-[#F5DF2E]'>.</span>
           </p>
           <p className='text-sm text-gray-600 mt-2 font-medium'>
             © 2026 Jonathan Mendoza.
@@ -152,13 +160,13 @@ const DigginLanding = () => {
             Privacy Policy
           </a>
           <a
-            href='#'
+            href='https://github.com/Jnmendza/diggin-ext'
             className='hover:text-[#F5DF2E] transition-colors underline decoration-2 decoration-[#333] underline-offset-4'
           >
             GitHub
           </a>
           <a
-            href='#'
+            href='mailto:contact@jonathanmendoza.dev'
             className='hover:text-[#F5DF2E] transition-colors underline decoration-2 decoration-[#333] underline-offset-4'
           >
             Contact

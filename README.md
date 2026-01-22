@@ -1,16 +1,44 @@
-# React + Vite
+# Digging - Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The official landing page for **Diggin<span className='text-[#F5DF2E]'>.</span>**, a Chrome extension for vinyl collectors.  
+Built with a "Brutalist" design aesthetic using React, Tailwind CSS, and Vite.
 
-Currently, two official plugins are available:
+**Live Site:** [https://digginext.us/](https://digginext.us/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ⚡️ Tech Stack
 
-## React Compiler
+- **Framework:** React 18 + Vite
+- **Styling:** Tailwind CSS v3
+- **Icons:** Lucide React
+- **Deployment:** Cloudflare Pages
+- **Routing:** React Router Dom (for Privacy Policy)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Getting Started
 
-## Expanding the ESLint configuration
+### 1. Clone & Install
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+git clone [https://github.com/Jnmendza/digging](https://github.com/Jnmendza/digging)
+cd digging-landing
+npm install
+```
+
+### 2. Run Locally
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+### 3. Build for Production
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+### 4. Deploy to Cloudflare Pages
+
+The project is configured to deploy to Cloudflare Pages. Follow the instructions in the [Cloudflare Pages documentation](https://developers.cloudflare.com/pages/get-started/).
