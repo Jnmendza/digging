@@ -4,7 +4,6 @@ import demoGif from "./assets/demo.gif";
 
 const DigginLanding = () => {
   return (
-    // MAIN CONTAINER: Added consistent padding and a nice grid pattern background
     <div className='min-h-screen bg-[#111] text-white font-sans selection:bg-[#F5DF2E] selection:text-black bg-[radial-gradient(#333_1px,transparent_1px)] [background-size:16px_16px]'>
       {/* NAVIGATION */}
       <nav className='border-b-4 border-[#333] px-6 py-5 flex justify-between items-center bg-[#111] sticky top-0 z-50'>
@@ -47,11 +46,15 @@ const DigginLanding = () => {
           right-click, & get instant Discogs pricing without leaving the page.
         </p>
 
-        {/* CTA Buttons: Fixed the "Bar" look. They now flex properly. */}
         <div className='flex flex-col md:flex-row gap-6 w-full justify-center items-center'>
-          <button className='w-full md:w-auto bg-[#F5DF2E] text-black text-lg font-black px-10 py-5 uppercase tracking-wide border-b-4 border-r-4 border-white hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[6px_6px_0px_0px_#ffffff] transition-all active:translate-y-0 active:translate-x-0 active:shadow-none'>
+          <a
+            href='https://chromewebstore.google.com/detail/diggin-vinyl-price-search/peedhjkbgflkkjfmgpacdlkhbmlgihpc?hl=en&authuser=0'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='w-full md:w-auto bg-[#F5DF2E] text-black text-lg font-black px-10 py-5 uppercase tracking-wide border-b-4 border-r-4 border-white hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[6px_6px_0px_0px_#ffffff] transition-all active:translate-y-0 active:translate-x-0 active:shadow-none text-center'
+          >
             Add to Chrome — It's Free
-          </button>
+          </a>
 
           <button
             onClick={() => {
